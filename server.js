@@ -79,7 +79,7 @@ app.post("/user", async (req, res) => {
 
     users.push(newUser);
 
-    const token = jwt.sign({ userId: newUser.id, username: newUser.username }, secretKey, { expiresIn: '7d' }); // You can adjust the expiration time
+    const token = jwt.sign({ userId: newUser.id, username: newUser.username }, secretKey, { expiresIn: '7d' });
 
     res.json({ message: 'User added successfully', token });
 });
